@@ -6,9 +6,10 @@ pipeline {
     maven 'maven3'     // must match the name you set in Jenkins Tools
   }
 
-  environment {
-    DOCKER_IMAGE = 'midterm-demo:ci'
-  }
+environment {
+  DOCKER_IMAGE = 'midterm-demo:ci'
+  PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+}
 
   stages {
     stage('Checkout') {
